@@ -1,18 +1,3 @@
-<?php
-class Movie
-{
-    public $id;
-    public $title;
-    public $director;
-    public $plot;
-    public $actors;
-    public $genres;
-}
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="it">
 
