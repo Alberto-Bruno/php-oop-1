@@ -1,57 +1,24 @@
 <?php
+
 class Movie
 {
-    public $id;
     public $title;
     public $director;
     public $year;
-    public $actors;
-    public $genres;
-    public $vote;
+    public $genre;
+    public $music;
 
-    // Constructor
-    public function __construct($_id, $_title, $_director, $_year, $_actors, $_genres, $_vote)
+    public function __construct($title, $director, $year, $genre, $music)
     {
-        $this->id = $_id;
-        $this->title = $_title;
-        $this->director = $_director;
-        $this->year = $_year;
-        $this->actors = $_actors;
-        $this->genres = $_genres;
-        $this->vote = $_vote;
+        $this->title = $title;
+        $this->director = $director;
+        $this->year = $year;
+        $this->genre = $genre;
+        $this->music = $music;
     }
 
-    // Methods 
-    public function getMovieTitle()
+    public function getInfo()
     {
-        return $this->title;
-    }
-    public function getMovieDirector()
-    {
-        return $this->director;
-    }
-    public function getMovieYear()
-    {
-        return $this->year;
-    }
-    public function getMovieActors()
-    {
-        $actors_names = '';
-        foreach ($this->actors as $actor) {
-            $actors_names .= $actor->name . ', ';
-        }
-        return trim($actors_names);
-    }
-    public function getMovieGenres()
-    {
-        $genreNames = '';
-        foreach ($this->genres as $genre) {
-            $genreNames .= $genre->name . ', ';
-        }
-        return $genreNames;
-    }
-    public function getMovieVote()
-    {
-        return $this->vote;
+        return "$this->title, Diretto da $this->director Anno $this->year, Genere film $this->genre, colonna sonora di $this->music";
     }
 }
