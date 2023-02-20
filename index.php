@@ -32,7 +32,7 @@ foreach ($movies as $movie) {
             <div class="row row-cols-3 my-4 g-4">
                 <?php foreach ($moviesList as $movie) : ?>
                     <div class="col">
-                        <ul class="list-group">
+                        <ul class="list-group rounded">
                             <li class="list-group-item">
                                 <h3 class="text-center"><?= $movie->title ?></h3>
                             </li>
